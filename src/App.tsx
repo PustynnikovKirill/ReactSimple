@@ -1,32 +1,35 @@
 import './App.css'
 
+
+
 function App() {
-
-  /*  const users = [
-        {
-            name: "Kirill",
-            age: {
-                city: "Minsk",
-                country: "Belarus"
-            }
-        },
-        {
-            name: "Liza",
-            age: {
-                city: "Minsk",
-                country: "Belarus"
-            }
-        }
-    ]*/
-
 
     return (
         <>
             <div>
-                {}
+                <Rating/>
             </div>
         </>
     )
 }
 
-export default App
+function Rating () {
+
+    return (
+        <div>
+            <Star/>
+        </div>
+    )
+}
+
+function Star () {
+    return (
+        <>
+            <div> star </div>
+            <div> star </div>
+            <div> star </div>
+    </>
+    )
+}
+
+export default App;
