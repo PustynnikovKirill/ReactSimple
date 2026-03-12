@@ -1,36 +1,20 @@
 import './App.css'
+import {Accordion} from "./components/Accordion/Accordion.tsx";
+import {Rating} from "./components/Rating/Rating.tsx";
 
 
+export const App = () => {
 
-function App() {
-
-    return (
-        <>
-            <div>
-                <Rating/>
-            </div>
-        </>
-    )
-}
-
-function Rating () {
-
-    return (
-        <div>
-            <Star/>
-        </div>
-    )
-}
-
-function Star () {
-    return (
-        <>
-            <div> star </div>
-            <div> star </div>
-            <div> star </div>
-            <div> star </div>
+    return <>
+        <PageTitle title = {"This is App Title"}/>
+        <Rating value ={3}/>
+        <Accordion title = {"Accordion Title"}/>
+        <Rating value ={2}/>
     </>
-    )
 }
 
-export default App;
+const PageTitle =(props:{title:string})=>{
+
+    return <>{props.title}</>;
+}
+
