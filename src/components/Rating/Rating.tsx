@@ -29,10 +29,12 @@ export const Rating = (props:{ value:number}) => {
     </div>
 }
 
+type StarPropsType = {
+    selected: boolean
+}
+const Star = ( { selected}:StarPropsType) => {
 
-const Star = (props: { selected: boolean}) => {
-
-    if (props.selected === true) {
+    if (selected === true) {
         return <span> <b>star</b> </span>
     } else {
       return  <span> star </span>

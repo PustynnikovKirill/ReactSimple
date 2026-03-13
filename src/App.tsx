@@ -8,7 +8,8 @@ export const App = () => {
     return <>
         <PageTitle title = {"This is App Title"}/>
         <Rating value ={3}/>
-        <Accordion title = {"Accordion Title"}/>
+        <Accordion title = {"Menu"} colllapsed = {true}/>
+        <Accordion title = {"Users"} colllapsed = {false}/>
         <Rating value ={2}/>
     </>
 }
