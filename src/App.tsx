@@ -7,10 +7,13 @@ export const App = () => {
 
     return <>
         <PageTitle title = {"This is App Title"}/>
-        <Rating value ={3}/>
-        <Accordion title = {"Menu"} colllapsed = {true}/>
-        <Accordion title = {"Users"} colllapsed = {false}/>
-        <Rating value ={2}/>
+        <Accordion title = "Menu" colllapsed = {true}/>
+        <Accordion title = "Users" colllapsed = {false}/>
+        <Rating value = {1}/>
+        <Rating value = {2}/>
+        <Rating value = {3}/>
+        <Rating value = {4}/>
+        <Rating value = {5}/>
     </>
 }
 

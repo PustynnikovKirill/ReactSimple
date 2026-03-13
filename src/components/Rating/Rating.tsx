@@ -1,42 +1,30 @@
-export const Rating = (props:{ value:number}) => {
+type RatingType = {
+    value:0|1|2|3|4|5
+}
 
-    if (props.value === 2){
-        return <div>
-            <Star selected={true}/>
-            <Star selected={false}/>
-            <Star selected={false}/>
-            <Star selected={false}/>
-            <Star selected={false}/>
+export const Rating = ({value}:RatingType) => {
+
+    return <>
+         <div>
+            <Star selected={value > 0}/>
+            <Star selected={value > 1}/>
+            <Star selected={value > 2}/>
+            <Star selected={value > 3}/>
+            <Star selected={value > 4}/>
         </div>
-    }
-    if (props.value === 3){
-        return <div>
-            <Star selected={true}/>
-            <Star selected={true}/>
-            <Star selected={true}/>
-            <Star selected={false}/>
-            <Star selected={false}/>
-
-        </div>
-    }
-    return <div>
-        <Star selected={true}/>
-        <Star selected={true}/>
-        <Star selected={false}/>
-        <Star selected={true}/>
-        <Star selected={false}/>
-
-    </div>
+    </>
 }
 
 type StarPropsType = {
     selected: boolean
 }
-const Star = ( { selected}:StarPropsType) => {
+const Star = ({ selected}:StarPropsType) => {
 
     if (selected === true) {
         return <span> <b>star</b> </span>
     } else {
-      return  <span> star </span>
+      return <>
+          <span> star </span>
+      </>
     }
 }

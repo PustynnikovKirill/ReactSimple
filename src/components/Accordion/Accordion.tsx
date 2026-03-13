@@ -1,19 +1,21 @@
-
 type Props = {
     title: string,
-    colllapsed?:boolean
+    colllapsed: boolean
 }
 
-export const Accordion = ({title}:Props) => {
-    return <>
+type AccordionTitleProps = {
+    title: string,
+}
+
+export const Accordion = ({title, colllapsed}: Props) => {
+
+     return   <>
         <AccordionTitle title={title}/>
-        <AccordionBody/>
-</>
-
-
+        {!colllapsed && <AccordionBody/>}
+        </>
 }
 
-const AccordionTitle = ({title}:Props) => {
+const AccordionTitle = ({title}: AccordionTitleProps) => {
     return <>
         <h3>{title}</h3>
     </>
